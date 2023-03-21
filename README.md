@@ -56,3 +56,5 @@ Let's go back to our micro service application.
 3. Query micro-service
 4. Moderation micro-service
 5. Event micro=service
+
+After capsulating all, run each one in isolation.
