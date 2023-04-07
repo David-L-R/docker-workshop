@@ -51,5 +51,5 @@ So, if we have an Node.js application, and we install different packages, like:
 
 Let's go back to our micro service application.
 
-1. Post micro service
-2. Comment micro service
+1. Post micro-service
+2. Comment micro-service
