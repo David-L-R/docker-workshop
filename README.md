@@ -46,3 +46,5 @@ So, if we have an Node.js application, and we install different packages, like:
 - `nodemon`
 
   How can we install them?
+
+## Run multiple instances
