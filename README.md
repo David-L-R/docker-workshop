@@ -22,13 +22,25 @@ Docker is needed for several reasons, including:
 
 1. Efficiency: Containers are generally more resource-efficient than virtual machines, as they share the host system's kernel and do not require a separate operating system for each application. This efficiency translates into lower resource usage and faster start-up times for containerized applications.
 
-# Setup
+# "Clean" Setup
 
 All these information is confusing... Let's look at a concrete example. 
+
+
+
+
+## NodeJS Setup
 
 When we run our Node/React applications we start by installing packages. To do that we are using `npm install`. But, we actually assume the machine we are running this code on has `npm` installed. 
 
 So how do we make sure that no matter where we run our code - our local machine, or an external server, the code will run correctly? 
 
 Docker come to save the day!
+
+So, if we have an Node.js application, and we install different packages, like:
+- `express`
+- `axios`
+- `nodemon`
+How can we install them? 
+
 
