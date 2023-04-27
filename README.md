@@ -24,25 +24,24 @@ Docker is needed for several reasons, including:
 
 ## "Clean" Setup
 
-All these information is confusing... Let's look at a concrete example. 
+All these information is confusing... Let's look at a concrete example.
 
 - FROM alpine
 
 TODO: provide excercise
-
+TODO: make mistakes on purpose
 
 ## NodeJS Setup
 
-When we run our Node/React applications we start by installing packages. To do that we are using `npm install`. But, we actually assume the machine we are running this code on has `npm` installed. 
+When we run our Node/React applications we start by installing packages. To do that we are using `npm install`. But, we actually assume the machine we are running this code on has `npm` installed.
 
-So how do we make sure that no matter where we run our code - our local machine, or an external server, the code will run correctly? 
+So how do we make sure that no matter where we run our code - our local machine, or an external server, the code will run correctly?
 
 Docker come to save the day!
 
 So, if we have an Node.js application, and we install different packages, like:
+
 - `express`
 - `axios`
 - `nodemon`
-How can we install them? 
-
-
+  How can we install them?
