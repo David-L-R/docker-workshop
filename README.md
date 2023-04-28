@@ -26,7 +26,7 @@ Docker is needed for several reasons, including:
 
 All these information is confusing... Let's look at a concrete example. 
 
-
+alpine
 
 
 ## NodeJS Setup
