@@ -24,19 +24,15 @@ Docker is needed for several reasons, including:
 
 ## Commands
 
-### part 1
+### part 1 (docker run)
 
 ```bash
+
 docker version
 
 docker run <image name>
 
 docker run <image name> command!
-```
-
-### Examples
-
-```bash
 
 docker run hello-world
 
@@ -49,14 +45,11 @@ docker run hello-world echo hi there
 docker run hello-world ls
 ```
 
-### Part 2
+### Part 2 (docker ps)
 
 ```bash
 docker ps
-```
-### Examples
 
-```bash
 docker run busy-box ping google.com
 
 docker ps
@@ -66,7 +59,7 @@ docker ps
 docker ps 
 ```
 
-### Part 3 
+### Part 3 (create | start | stop | kill)
 
 ```bash
 docker create hello-world
@@ -77,7 +70,7 @@ docker stop <id>
 
 docker kill <id>
 ```
-### Part 3
+### Part 4 (exec -it)
 
 ```bash
 docker run redis
@@ -95,6 +88,28 @@ redis-cli
 # You can exit the cli with ctrl/cmd + c
 # You can exit the shell with alt/ctrl + d
 ```
+### Part 5 (Isolation)
+
+```bash
+
+docker run -it busybox sh
+
+> ls
+
+# in another terminal
+
+docker run -it busybox sh
+
+> touch hello_world
+> ls
+
+# back to the first container
+
+> ls
+
+# we should not see the new file
+```
+
 
 
 
