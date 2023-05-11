@@ -26,23 +26,29 @@ Docker is needed for several reasons, including:
 
 ### part 1
 
-```docker version```
+```bash
+docker version
 
-```docker run <image name>```
+docker run <image name>
 
-```docker run <image name> command!```
+docker run <image name> command!
+```
 
 ### Examples
 
-```docker run hello-world```
+```bash
 
-```docker run busybox echo hi there```
+docker run hello-world
 
-```docker run busybox ls```
+docker run busybox echo hi there
 
-```docker run hello-world echo hi there```
+docker run busybox ls
 
-```docker run hello-world ls```
+docker run hello-world echo hi there
+
+docker run hello-world ls
+
+```
 
 
 
