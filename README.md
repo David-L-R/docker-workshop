@@ -181,6 +181,69 @@ RUN npm install
 
 CMD ["npm", "start"]
 ```
+We get an error when running:
+```bash
+docker build .
+```
 
+```bash
+# ERROR
 
+ > [2/2] RUN npm install:
+#6 0.740 npm ERR! Tracker "idealTree" already exists
+#6 0.741 
+#6 0.741 npm ERR! A complete log of this run can be found in: /root/.npm/_logs/2023-05-11T17_25_39_283Z-debug-0.log
+```
 
+The reason is that we don't have any package.json to install
+
+## Add Build Files
+
+```docker
+FROM node:alpine
+
+COPY ./ ./
+RUN npm install
+
+CMD ["npm", "start"]
+```
+`docker build .` works
+`docker run <id>` works, but we cannot reach that port
+
+## Port Forwarding
+
+`docker run -p 3001:3001 <id>`
+
+## Working Directory
+
+```docker
+FROM node:alpine
+
+WORKDIR /usr/src/app
+
+COPY ./ ./
+RUN npm install
+
+CMD ["npm", "start"]
+```
+
+## Rebuilds
+
+```docker
+FROM node:alpine
+
+WORKDIR /usr/src/app
+
+COPY package*.json ./
+RUN npm install
+
+COPY ./ ./
+
+CMD ["npm", "start"]
+```
+
+## Tag
+
+```bash
+docker build -t <tag> .
+```
