@@ -113,39 +113,10 @@ docker run -it busybox sh
 
 
 
-## "Clean" Setup
+## Docker File
 
-All these information is confusing... Let's look at a concrete example.
+Creating a docker file
 
-- FROM alpine
-
-TODO: provide excercise
-TODO: make mistakes on purpose
-
-## NodeJS Setup
-
-When we run our Node/React applications we start by installing packages. To do that we are using `npm install`. But, we actually assume the machine we are running this code on has `npm` installed.
-
-So how do we make sure that no matter where we run our code - our local machine, or an external server, the code will run correctly?
-
-Docker come to save the day!
-
-So, if we have an Node.js application, and we install different packages, like:
-
-- `express`
-- `axios`
-- `nodemon`
-
-  How can we install them?
-
-## Run multiple instances
-
-Let's go back to our micro service application.
-
-1. Post micro-service
-2. Comment micro-service
-3. Query micro-service
-4. Moderation micro-service
-5. Event micro=service
-
-After capsulating all, run each one in isolation.
+1. Specify a base image
+2. Run some commands to install all programs needed
+3. Specify commands to run the container
