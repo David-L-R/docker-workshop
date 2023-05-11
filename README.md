@@ -114,7 +114,7 @@ docker run -it busybox sh
 
 The process when creating a docker file
 
-1. Specify a base image
+1. Specify a base image (compares with an OS)
 2. Run some commands to install all programs needed
 3. Specify commands to run the container
 
@@ -139,3 +139,48 @@ RUN apk add --update redis
 
 CMD ["redis-server"]
 ```
+
+Then run in the terminal
+
+```bash
+docker build .
+
+# when you get the new id of the container
+
+docker run <id>
+```
+
+### Build with cache
+```docker
+FROM alpine
+
+# Download and install dependencies
+
+RUN apk add --update redis
+RUN apk add --update gcc
+
+# Tell the image what to do when it starts as a container
+
+CMD ["redis-server"]
+```
+
+## Add Docker To Our Project
+
+```docker
+FROM alpine
+
+RUN npm install
+
+CMD ["npm", "start"]
+```
+
+```docker
+FROM node:alpine
+
+RUN npm install
+
+CMD ["npm", "start"]
+```
+
+
+
