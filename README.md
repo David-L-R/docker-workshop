@@ -47,7 +47,53 @@ docker run busybox ls
 docker run hello-world echo hi there
 
 docker run hello-world ls
+```
 
+### Part 2
+
+```bash
+docker ps
+```
+### Examples
+
+```bash
+docker run busy-box ping google.com
+
+docker ps
+
+# kill (ctrl + c) the running docker
+
+docker ps 
+```
+
+### Part 3 
+
+```bash
+docker create hello-world
+
+docker start -a hello-world
+
+docker stop <id>
+
+docker kill <id>
+```
+### Part 3
+
+```bash
+docker run redis
+
+docker exec -it <id> <command>
+
+docker exec -it <id> redis-cli
+
+docker exec -it <id> sh
+
+# then, inside the shell
+
+redis-cli
+
+# You can exit the cli with ctrl/cmd + c
+# You can exit the shell with alt/ctrl + d
 ```
 
 
