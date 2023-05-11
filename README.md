@@ -110,13 +110,32 @@ docker run -it busybox sh
 # we should not see the new file
 ```
 
-
-
-
 ## Docker File
 
-Creating a docker file
+The process when creating a docker file
 
 1. Specify a base image
 2. Run some commands to install all programs needed
 3. Specify commands to run the container
+
+### Creating a docker file
+
+Create a new project.
+
+Add a `Dockerfile`
+
+1. Specify a base image (FROM)
+2. Run some commands to install all programs needed (RUN)
+3. Specify commands to run the container (CMD)
+
+```docker
+FROM alpine
+
+# Download and install dependencies
+
+RUN apk add --update redis
+
+# Tell the image what to do when it starts as a container
+
+CMD ["redis-server"]
+```
